@@ -4,10 +4,12 @@ Este es un demo a la pagina https://www.timeanddate.com/ realizado con IntelliJ 
 
 Formato Page Object Model / Page Factory.
 
-Para ver el código, ingresar por la ruta src/test/java/org/demos.
-Los Test Cases se ejeutan con diferentes browsers.
+Los Test Cases son independientes, pueden ser ejecutados en forma individual o grupal, asi como con diferentes browsers.
 
-Fue realizado con diferentes recursos para realizar un demo lo mas completo posible, como ser extends class, Exceptions, Asserts, @DataProvider, @Parameers, Robot List, splits, Actions, Waits, Select, JavascriptExecutor, etc.
+Para ver el código, ingresar por la ruta src/test/java/org/demos.
+
+
+Fue realizado con diferentes recursos, como ser extends class, Exceptions, Asserts, @DataProvider, @Parameers, Robot List, splits, Actions, Waits, Select, JavascriptExecutor, etc.
 Contiene distintas formas de control de flujo como ser for, if, else, while, switch, etc.
 
 Se realizao en distintos sectores de la página para poder lograr diferentes búsquedaas, selecciones mediante box, scroll, calendar, click, comparaciones, descarga de archivos, copia contenido a clipboard, cronometro, etc.
@@ -16,7 +18,7 @@ Archivos utilizados.
 -------------------
 pom.xml: este archivo coniene las dependencies necesarias.
 
-timeandate.xml: Contiene los parametros necesarios para cada clase de testeo.
+timeandate.xml: Contiene los parametros necesarios para cada clase de testeo, actualmente se ejecutaran todos los Test Cases pero pueden dividirse en grupo o ejecutarse solo algunos.
 
 
 
