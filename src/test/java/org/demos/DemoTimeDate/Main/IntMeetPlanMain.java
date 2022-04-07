@@ -228,7 +228,6 @@ public class IntMeetPlanMain extends BasePage {
 
 
                     selButton.click();
-                    // System.out.println("Zones button selection from Location " + locNumber2);
                     System.out.println("Location "+locNumber2+" was selected using Zones button");
 
             }}catch (NoSuchElementException nse) {
@@ -256,9 +255,8 @@ public class IntMeetPlanMain extends BasePage {
             se.selectByValue(searchValue);
 
             //For this demo always select the first option of "Pick Location" using TAB and Arrow Down action
-            Actions action = new Actions(driver);
-            action.sendKeys(Keys.TAB).build().perform();
-            action.sendKeys(Keys.ARROW_DOWN).build().perform();
+            getActions().sendKeys(Keys.TAB).build().perform();
+            getActions().sendKeys(Keys.ARROW_DOWN).build().perform();
             getWait().until(ExpectedConditions.elementToBeClickable(selButton)).click();
 
 

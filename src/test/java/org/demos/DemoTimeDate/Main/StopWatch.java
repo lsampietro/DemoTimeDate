@@ -68,7 +68,7 @@ public class StopWatch extends BasePage {
        //Always turn character option to lowercase
         char opt = Character.toLowerCase(yn);
 
-        //Aprox time the timer will be  running
+        //The timer will be running the aprox time
         Thread.sleep(sec);
 
         //Yes option will click Split button. No option will not do it
