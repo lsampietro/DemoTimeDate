@@ -34,7 +34,7 @@
     <parameter name="subMenu" value="International Meeting Planner"></parameter>
     <parameter name="expectedTitle" value="World Clock Meeting Planner"></parameter>
     <parameter name="browser" value="edge"></parameter>
-    <parameter name="date" value="2022-03-25"></parameter>
+    <parameter name="date" value="2022-12-25"></parameter>
     <classes>
         <class name="org.demos.DemoTimeDate.Test.IntMeetPlan_MainTest"></class>
     </classes>

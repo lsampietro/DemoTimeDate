@@ -3,20 +3,46 @@ package org.demos.DemoTimeDate.Base;
 
 import org.demos.DemoTimeDate.Main.TimeHomePage;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 
 public class BaseTest {
 
-    protected BrowserSelector myDriver;
-    private TimeHomePage timeHomePage;
 
+    private TimeHomePage timeHomePage;
+    private WebDriver driver;
 
 
     @BeforeTest(alwaysRun = true)
     @Parameters({"browser"})
     public void setUp(String browser){
-       myDriver = new BrowserSelector(browser);
-       timeHomePage = new TimeHomePage(myDriver.getDriver());
+        switch (browser.toLowerCase()){
+            case "chrome":
+                System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "\\drivers\\chromedriver.exe");
+                driver = new ChromeDriver();
+                break;
+
+            case "firefox":
+                System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir") + "\\drivers\\geckodriver.exe");
+                driver = new FirefoxDriver();
+                break;
+
+            case "edge":
+                System.setProperty("webdriver.edge.driver",System.getProperty("user.dir") + "\\drivers\\msedgedriver.exe");
+                driver = new EdgeDriver();
+                break;
+
+            default:
+                System.out.println("-------------------------------");
+                System.out.println("Incorrect browser. Check params");
+                System.out.println("-------------------------------");
+        }
+
+       driver.manage().window().maximize();
+       timeHomePage = new TimeHomePage(driver);
        timeHomePage.openPage();
     }
 

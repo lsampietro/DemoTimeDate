@@ -245,7 +245,6 @@ public class IntMeetPlanMain extends BasePage {
          try{
              if(locNumber2 > 0 && locNumber2 <= 12) {
 
-
             //Click the Search Button of the Location indicated
             searchButtons.get(locNumber2 - 1).click();
             getWait().until(ExpectedConditions.elementToBeClickable(pickCountry)).click();
@@ -258,7 +257,6 @@ public class IntMeetPlanMain extends BasePage {
             getActions().sendKeys(Keys.TAB).build().perform();
             getActions().sendKeys(Keys.ARROW_DOWN).build().perform();
             getWait().until(ExpectedConditions.elementToBeClickable(selButton)).click();
-
 
             System.out.println("Location "+locNumber2+" was selected using Search button");
             }else{
