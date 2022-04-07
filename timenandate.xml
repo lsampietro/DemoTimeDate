@@ -3,7 +3,6 @@
 
 <suite name="TimeAndDate" thread-count="5" parallel="tests">
 
-
     <test name="MWC_BoxSearch">
         <parameter name="menu" value="World Clock"></parameter>
         <parameter name="subMenu" value="Main World Clock"></parameter>
@@ -31,14 +30,14 @@
 
     <test name="InternationalMeeting">
         <parameter name="menu" value="Time Zones"></parameter>
-    <parameter name="subMenu" value="International Meeting Planner"></parameter>
-    <parameter name="expectedTitle" value="World Clock Meeting Planner"></parameter>
-    <parameter name="browser" value="edge"></parameter>
-    <parameter name="date" value="2022-12-25"></parameter>
-    <classes>
+        <parameter name="subMenu" value="International Meeting Planner"></parameter>
+        <parameter name="expectedTitle" value="World Clock Meeting Planner"></parameter>
+        <parameter name="browser" value="edge"></parameter>
+        <parameter name="date" value="2022-12-25"></parameter>
+      <classes>
         <class name="org.demos.DemoTimeDate.Test.IntMeetPlan_MainTest"></class>
-    </classes>
-</test>
+      </classes>
+    </test>
 
 
     <test name="StopWatch">

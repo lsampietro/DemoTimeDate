@@ -273,7 +273,6 @@ public class IntMeetPlanMain extends BasePage {
       public void getTimetable(){
         showTimetable.submit();
       }
-
     }
 
 

@@ -11,10 +11,8 @@ import org.testng.annotations.*;
 
 public class BaseTest {
 
-
     private TimeHomePage timeHomePage;
     private WebDriver driver;
-
 
     @BeforeTest(alwaysRun = true)
     @Parameters({"browser"})
@@ -52,10 +50,8 @@ public class BaseTest {
         timeHomePage.dispose();
     }
 
-
     public TimeHomePage getTimeHomePage(){
         return timeHomePage;
     }
-
 
 }
