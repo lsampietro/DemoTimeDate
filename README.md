@@ -4,10 +4,9 @@ Este es un demo a la pagina https://www.timeanddate.com/ realizado con IntelliJ 
 
 Formato Page Object Model / Page Factory.
 
-Los Test Cases son independientes, pueden ser ejecutados en forma individual o grupal, asi como con diferentes browsers.
+Los 4 test cases que contiene el demo serán ejecutados en paralelo (todos al mismo tiempo), dos con edge y dos con chrome, aunque puede ser configurado. Los Test Cases son independientes, pueden ser ejecutados tanto en forma individual como grupal.
 
 Para ver el código, ingresar por la ruta src/test/java/org/demos.
-
 
 Fue realizado con diferentes recursos, como ser extends class, Exceptions, Asserts, @DataProvider, @Parameers, Robot List, splits, Actions, Waits, Select, JavascriptExecutor, etc.
 Contiene distintas formas de control de flujo como ser for, if, else, while, switch, etc.
@@ -18,24 +17,19 @@ Archivos utilizados.
 -------------------
 pom.xml: este archivo coniene las dependencies necesarias.
 
-timeandate.xml: Contiene los parametros necesarios para cada clase de testeo, actualmente se ejecutaran todos los Test Cases pero pueden dividirse en grupo o ejecutarse solo algunos.
+timeandate.xml: Contiene los parametros necesarios para cada clase de testeo, actualmente se ejecutaran todos los Test Cases en paralelo aunque pueden dividirse en grupo o ejecutarse solo algunos.
 
 
 
 Package "Base"
 -------------
-
-BrowserSelector: Clase mediante la cual se llamará al browser elegido para la realización de pruebas.
-Contiene un switch con tres case para realizar selección de chrome, edge o firefox.
-
-
 BasePage: Contiene métodos que serán utilizados en todas las clases principales mediante "extends".
 Carga de url y métodos para ser convocados desde donde sea necesario como ser WebDriverWait, Actions, WebDriver.
 
-
 BaseTest: Similar a BasePage pero para las clases Test.
 Será convocado mediante "extends" en las clases de testeo.
-Contiene @BeforeTest, selector de browser.
+Contiene. 
+@BeforeTest, selector de browser.
 
 @AfterTest cierre del driver.
 Llamado a carga de url.
@@ -86,4 +80,3 @@ StopWatchTest: Clase con extends BaseTest testeará mediante la clase StopWatch.
 Realizará la selección del menú principal convocando el método selectTopMenu detallado en TimeHomePage.
 Iniciará el timer, presionara split para realizar una primera acción de resultado que se verá en pantalla, pausara el timer, y copiara a clipboard el resultado. 
 De quererlo se puede realizar download de resultado en txt en lugar de copiar a clipboard, reemplazando la variable copyClipbeard por downloadTxtFile.
-
