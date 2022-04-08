@@ -13,8 +13,7 @@ public class MWC_SearchBoxTest extends BaseTest {
     //Open the page
     @Test(priority = 0)
     public void openPage(){
-        getTimeHomePage();
-        objMainWorldClock = new MainWorldClock(getTimeHomePage().getDriver());
+       objMainWorldClock = new MainWorldClock(getTimeHomePage().getDriver());
     }
 
     //Select option from top menu

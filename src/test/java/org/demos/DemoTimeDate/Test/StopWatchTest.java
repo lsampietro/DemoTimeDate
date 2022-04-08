@@ -11,7 +11,6 @@ public class StopWatchTest extends BaseTest {
 
     @Test(priority = 0)
     public void openPage(){
-        getTimeHomePage();
         objStopWatch = new StopWatch(getTimeHomePage().getDriver());
     }
 

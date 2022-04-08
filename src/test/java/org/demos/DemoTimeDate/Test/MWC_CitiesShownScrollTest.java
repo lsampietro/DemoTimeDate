@@ -12,7 +12,6 @@ public class MWC_CitiesShownScrollTest extends BaseTest {
     //Open the page
     @Test(priority = 0)
     public void openPage(){
-        getTimeHomePage();
         objMainWorldClock = new MainWorldClock(getTimeHomePage().getDriver());
     }
 

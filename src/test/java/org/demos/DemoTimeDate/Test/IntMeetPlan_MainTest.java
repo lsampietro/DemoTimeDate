@@ -13,7 +13,6 @@ public class IntMeetPlan_MainTest extends BaseTest {
    //Open the page
    @Test(priority = 0)
    public void openPage(){
-           getTimeHomePage();
            objIntMeetPlanMain = new IntMeetPlanMain(getTimeHomePage().getDriver());
        }
 

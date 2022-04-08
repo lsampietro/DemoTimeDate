@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TimeAndDate" thread-count="5" parallel="tests">
+<suite name="TimeAndDate" thread-count="4" parallel="tests">
 
     <test name="MWC_BoxSearch">
         <parameter name="menu" value="World Clock"></parameter>

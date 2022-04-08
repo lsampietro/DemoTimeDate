@@ -196,8 +196,7 @@ public class IntMeetPlanMain extends BasePage {
             new Select(driver.findElement(By.xpath("//select[@id='p" + locNumber2 + "']"))).selectByValue(lValue);
 
             //Press ESC option in order to close the dropdown options
-            Actions action = new Actions(driver);
-            action.sendKeys(Keys.ESCAPE).build().perform();
+             getActions().sendKeys(Keys.ESCAPE).build().perform();
 
             System.out.println("Location "+locNumber2+" was selected using dropdown option");
 
@@ -221,11 +220,9 @@ public class IntMeetPlanMain extends BasePage {
                     //Click "Pick Time Zone" dropdown
                     getWait().until(ExpectedConditions.elementToBeClickable(timeZoneScroll)).click();
 
-
                     //Select an option from the scroll (Using its html value)
                     Select se = new Select(timeZoneScroll);
                     se.selectByValue(zoneValue);
-
 
                     selButton.click();
                     System.out.println("Location "+locNumber2+" was selected using Zones button");

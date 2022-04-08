@@ -14,7 +14,7 @@ public class TimeHomePage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//ul[@id='site-nav']")
+    @FindBy(xpath = "//nav[@id='nav']")
     private WebElement bar;
 
         public void openPage(){

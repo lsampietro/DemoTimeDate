@@ -6,10 +6,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.nio.channels.Selector;
+
 public class BasePage {
     protected WebDriver driver;
     private WebDriverWait wait;
     private Actions act;
+    private Selector se;
     private String url = "https://www.timeanddate.com/";
 
 
