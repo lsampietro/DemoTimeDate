@@ -1,56 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TimeAndDate" thread-count="4" parallel="tests">
-
-    <test name="MWC_BoxSearch">
-        <parameter name="menu" value="World Clock"></parameter>
-        <parameter name="subMenu" value="Main World Clock"></parameter>
-        <parameter name="expectedTitle" value="The World Clock — Worldwide"></parameter>
-        <parameter name="browser" value="edge"></parameter>
-        <parameter name="city" value="Madrid"></parameter>
-        <parameter name="cityToSelect" value="Equatorial Guinea, Madrid"></parameter>
-        <parameter name="expectedName" value="Current Local Time in Madrid, Equatorial Guinea"></parameter>
-        <classes>
-            <class name="org.demos.DemoTimeDate.Test.MWC_SearchBoxTest"></class>
-        </classes>
-    </test>
+<suite name="TimeAndDate" thread-count="3" parallel="tests">
 
         <test name="MWC_CitiesShownScroll">
+            <parameter name="url" value="https://www.timeanddate.com/"></parameter>
             <parameter name="menu" value="World Clock"></parameter>
             <parameter name="subMenu" value="Main World Clock"></parameter>
             <parameter name="expectedTitle" value="The World Clock — Worldwide"></parameter>
             <parameter name="browser" value="chrome"></parameter>
-            <parameter name="opt" value="Somewhat Popular (469)"></parameter>
-            <parameter name="city" value="Buenos Aires"></parameter>
-        <classes>
-            <class name="org.demos.DemoTimeDate.Test.MWC_CitiesShownScrollTest"></class>
-        </classes>
-    </test>
+            <parameter name="opt" value="Capitals (215)"></parameter>
+            <parameter name="city" value="Abuja"></parameter>
+          <classes>
+            <class name="DemoTimeDate.Test.MWC_CitiesShownScrollTest"></class>
+          </classes>
+        </test>
 
-    <test name="InternationalMeeting">
-        <parameter name="menu" value="Time Zones"></parameter>
-        <parameter name="subMenu" value="International Meeting Planner"></parameter>
-        <parameter name="expectedTitle" value="World Clock Meeting Planner"></parameter>
-        <parameter name="browser" value="edge"></parameter>
-        <parameter name="date" value="2022-12-25"></parameter>
-      <classes>
-        <class name="org.demos.DemoTimeDate.Test.IntMeetPlan_MainTest"></class>
-      </classes>
-    </test>
+         <test name="InternationalMeeting">
+                <parameter name="url" value="https://www.timeanddate.com/"></parameter>
+                <parameter name="menu" value="Time Zones"></parameter>
+                <parameter name="subMenu" value="International Meeting Planner"></parameter>
+                <parameter name="expectedTitle" value="World Clock Meeting Planner"></parameter>
+                <parameter name="browser" value="edge"></parameter>
+                <parameter name="date" value="2022-10-20"></parameter>
+              <classes>
+                <class name="DemoTimeDate.Test.IntMeetPlanTest"></class>
+              </classes>
+            </test>
 
+            <test name="StopWatch">
+                <parameter name="url" value="https://www.timeanddate.com/"></parameter>
+                <parameter name="menu" value="Timers"></parameter>
+                <parameter name="subMenu" value="Stopwatch"></parameter>
+                <parameter name="expectedTitle" value="Online Stopwatch"></parameter>
+                <parameter name="browser" value="chrome"></parameter>
+                <parameter name="copyClipboard" value="CC"></parameter>
+                <parameter name="downloadTxtFile" value="DF"></parameter>
+                <parameter name="yesOrNo" value="y"></parameter>
+              <classes>
+                <class name="DemoTimeDate.Test.StopWatchTest"></class>
+              </classes>
+            </test>
 
-    <test name="StopWatch">
-        <parameter name="menu" value="Timers"></parameter>
-        <parameter name="subMenu" value="Stopwatch"></parameter>
-        <parameter name="expectedTitle" value="Online Stopwatch"></parameter>
-        <parameter name="browser" value="chrome"></parameter>
-        <parameter name="copyClipboard" value="CC"></parameter>
-        <parameter name="downloadTxtFile" value="DF"></parameter>
-        <parameter name="yesOrNo" value="y"></parameter>
-    <classes>
-        <class name="org.demos.DemoTimeDate.Test.StopWatchTest"></class>
-    </classes>
-</test>    
-
-</suite>
+    </suite>
