@@ -1,5 +1,9 @@
 # DemoTimeDate
 
+Path to visualize the automation testing code:
+DemoTimeDate/src/test/java/DemoTimeDate/
+
+
 Este es un demo de Java Automation Test a la pagina https://www.timeanddate.com/ utilizando Selenium TestNG y MAVEN.
 
 Formato Page Object Model / Page Factory.
